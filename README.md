@@ -4,14 +4,6 @@
 
 ## Steps
 
-#### Fetch Data
-
-In App.jsx, use the fetch API to get job information from an external API. Use the useEffect hook to make the API call when the component mounts. While the data is being fetched, set up a loading state that displays a message to the user.
-
-#### State Value
-
-Once the data has been fetched, store it in a state variable using the useState hook. This will allow you to modify the data and have those changes automatically reflected in the rendered output.
-
 #### JobInfo
 
 Create a JobInfo component to display the first job in the list. Use object destructuring to extract the relevant data from the job object. Display the company, dates, title, and duties, using the Duties component to render the list of duties.
