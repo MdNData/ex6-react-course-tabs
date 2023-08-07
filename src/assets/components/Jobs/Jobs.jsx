@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Nav } from "./Nav/Nav";
+import { Description } from "./Description/Description";
 
 export const Jobs = ({ data }) => {
   const searchUniques = () => {
@@ -25,15 +26,9 @@ export const Jobs = ({ data }) => {
   return (
     <section className="jobs-center">
       <Nav menu={menu} setJob={setJob} job={job} />
-      <article>
-        <h3>lalalal</h3>
-        <p className="job-company">Ciao</p>
-        <p className="job-date">3333</p>
-        <div className="job-desc">
-          <h6 className="job-icon">&</h6>
-          <p>sdkjsdfbsvbns</p>
-        </div>
-      </article>
+      {data.map((item, key) => {
+        return item.company == job ? <Description key={key} item={item} /> : "";
+      })}
     </section>
   );
 };
